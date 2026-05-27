@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Filmlijst</title>
+  <style>
+    body { font-family: Arial; background: #121214; color: white; padding: 20px; }
+    form { margin-bottom: 20px; }
+    input, select, button { padding: 8px; margin-right: 10px; }
+    #film-container { display: flex; gap: 15px; margin-top: 20px; }
+    .film-kaart { padding: 15px; border-radius: 8px; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+    .sci-fi { background-color: #1a365d; border-left: 5px solid #3182ce; }
+    .fantasy { background-color: #2f234f; border-left: 5px solid #805ad5; }
+    .romance { background-color: #5c233a; border-left: 5px solid #d53f8c; }
+  </style>
+</head>
+<body>
+  <h1>Mijn filmlijst</h1>
+
+  <form id="film-form">
+    <input type="text" id="title" placeholder="Titel van de film" required>
+    <select id="genre">
+      <option value="Sci-Fi">Sci-Fi</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Romance">Romance</option>
+    </select>
+	<input type="text" id="specific-info" placeholder="Tijdsetting (bijv. Het jaar 3024)">
+    <button type="submit">Toevoegen</button>
+  </form>
+
+  <hr>
+  <div id="film-container"></div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
